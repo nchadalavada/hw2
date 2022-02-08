@@ -69,15 +69,64 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
-kmdb.destroy_all
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model
 # TODO!
-
+# see models
+movie_id = movie.id
+person_id = person.id
+role_id = role.id
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+# inserting movies into database
+movie1 = Movie.new
+movie1.title = "Batman Begins"
+movie1.release_year = "2005"
+movie1.rating = "PG-13"
+movie1.save
+
+movie2 = Movie.new
+movie2.title = "The Dark Knight"
+movie2.release_year = "2008"
+movie2.rating = "PG-13"
+movie2.save
+
+movie3 = Movie.new
+movie3.title = "The Dark Knight Returns"
+movie3.release_year = "2012"
+movie3.rating = "PG-13"
+movie3.save
+
+movie1 = Movie.new
+movie1.title = "Batman Begins"
+movie1.release_year = "2005"
+movie1.rating = "PG-13"
+movie1.save
+
+person1 = Person.new
+person1.movie = movie.id
+person1.save
+
+person2 = Person.new
+person2.name = "Christian Bale"
+person2.rating = "PG-13"
+person2.movie = movie.id
+person2.role = role.id
+person2.save
+
+role1 = Role.new
+role1.character_name = "Bruce Wayne"
+role1.movie = movie.id
+role1.person = person.id
+role1.save
+
+
 
 # Prints a header for the movies output
 puts "Movies"
