@@ -115,10 +115,69 @@ person1.save
 
 person2 = Person.new
 person2.name = "Christian Bale"
-person2.rating = "PG-13"
 person2.movie = movie.id
 person2.role = role.id
 person2.save
+
+person3 = Person.new
+person3.name = "Michael Caine"
+person3.movie = movie.id
+person3.role = role.id
+person3.save
+
+person4 = Person.new
+person4.name = "Liam Neeson"
+person4.movie = movie.id
+person4.role = role.id
+person4.save
+
+person5 = Person.new
+person5.name = "Katie Holmes"
+person5.movie = movie.id
+person5.role = role.id
+person5.save
+
+person6 = Person.new
+person6.name = "Gary Oldman"
+person6.movie = movie.id
+person6.role = role.id
+person6.save
+
+person7 = Person.new
+person7.name = "Heath Ledger"
+person7.movie = movie.id
+person7.role = role.id
+person7.save
+
+person8 = Person.new
+person8.name = "Maggie Gyllenhaal"
+person8.movie = movie.id
+person8.role = role.id
+person8.save
+
+person9 = Person.new
+person9.name = "Tom Hardy"
+person9.movie = movie.id
+person9.role = role.id
+person9.save
+
+person10 = Person.new
+person10.name = "Joseph Gordon-Levitt"
+person10.movie = movie.id
+person10.role = role.id
+person10.save
+
+person11 = Person.new
+person11.name = "Anne Hathaway"
+person11.movie = movie.id
+person11.role = role.id
+person11.save
+
+person12 = Person.new
+person12.name = "Christian Bale"
+person12.movie = movie.id
+person12.role = role.id
+person12.save
 
 role1 = Role.new
 role1.character_name = "Bruce Wayne"
