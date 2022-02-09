@@ -218,14 +218,14 @@ puts ""
 # TODO!
 
 movies = Movie.all
-people = person.all
-roles = role.all
+people = Person.all
+roles = Role.all
 for movie in movies
     puts movie.name
     for person in people
         puts person.name
         for role in roles
-            puts character_name
-        end
-    end
+            puts role.character_name
+end
+end
 end
