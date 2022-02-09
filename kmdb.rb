@@ -76,9 +76,6 @@ Role.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
 # see models
-movie_id = movie.id
-person_id = person.id
-role_id = role.id
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
@@ -86,104 +83,116 @@ role_id = role.id
 
 # inserting movies into database
 movie1 = Movie.new
-movie1.title = "Batman Begins"
-movie1.release_year = "2005"
+movie1.name = "Batman Begins"
+movie1.year_released = "2005"
 movie1.rating = "PG-13"
 movie1.save
 
 movie2 = Movie.new
-movie2.title = "The Dark Knight"
-movie2.release_year = "2008"
+movie2.name = "The Dark Knight"
+movie2.year_released = "2008"
 movie2.rating = "PG-13"
 movie2.save
 
 movie3 = Movie.new
-movie3.title = "The Dark Knight Returns"
-movie3.release_year = "2012"
+movie3.name = "The Dark Knight Rises"
+movie3.year_released = "2012"
 movie3.rating = "PG-13"
 movie3.save
 
-movie1 = Movie.new
-movie1.title = "Batman Begins"
-movie1.release_year = "2005"
-movie1.rating = "PG-13"
-movie1.save
 
 person1 = Person.new
-person1.movie = movie.id
+person1.name = "Christopher Nolan"
 person1.save
 
 person2 = Person.new
 person2.name = "Christian Bale"
-person2.movie = movie.id
-person2.role = role.id
 person2.save
 
 person3 = Person.new
 person3.name = "Michael Caine"
-person3.movie = movie.id
-person3.role = role.id
 person3.save
 
 person4 = Person.new
 person4.name = "Liam Neeson"
-person4.movie = movie.id
-person4.role = role.id
 person4.save
 
 person5 = Person.new
 person5.name = "Katie Holmes"
-person5.movie = movie.id
-person5.role = role.id
 person5.save
 
 person6 = Person.new
 person6.name = "Gary Oldman"
-person6.movie = movie.id
-person6.role = role.id
 person6.save
 
 person7 = Person.new
 person7.name = "Heath Ledger"
-person7.movie = movie.id
-person7.role = role.id
 person7.save
 
 person8 = Person.new
-person8.name = "Maggie Gyllenhaal"
-person8.movie = movie.id
-person8.role = role.id
+person8.name = "Aaron Eckhart"
 person8.save
 
 person9 = Person.new
-person9.name = "Tom Hardy"
-person9.movie = movie.id
-person9.role = role.id
+person9.name = "Maggie Gyllenhaal"
 person9.save
 
 person10 = Person.new
-person10.name = "Joseph Gordon-Levitt"
-person10.movie = movie.id
-person10.role = role.id
+person10.name = "Tom Hardy"
 person10.save
 
 person11 = Person.new
-person11.name = "Anne Hathaway"
-person11.movie = movie.id
-person11.role = role.id
+person11.name = "Joseph Gordon-Levitt"
 person11.save
 
 person12 = Person.new
-person12.name = "Christian Bale"
-person12.movie = movie.id
-person12.role = role.id
+person12.name = "Anne Hathaway"
 person12.save
 
 role1 = Role.new
 role1.character_name = "Bruce Wayne"
-role1.movie = movie.id
-role1.person = person.id
 role1.save
+
+role2 = Role.new
+role2.character_name = "Alfred"
+role2.save
+
+role3 = Role.new
+role3.character_name = "Ra's Al Ghul"
+role3.save
+
+role4 = Role.new
+role4.character_name = "Rachel Dawes"
+role4.save
+
+role5 = Role.new
+role5.character_name = "Commissioner Gordon"
+role5.save
+
+role6 = Role.new
+role6.character_name = "Joker"
+role6.save
+
+role7 = Role.new
+role7.character_name = "Harvey Dent"
+role7.save
+
+role8 = Role.new
+role8.character_name = "Rachel Dawes"
+role8.save
+
+role9 = Role.new
+role9.character_name = "Bane"
+role9.save
+
+role10 = Role.new
+role10.character_name = "John Blake"
+role10.save
+
+role11 = Role.new
+role11.character_name = "Selina Kyle"
+role11.save
+
 
 
 
@@ -194,6 +203,10 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output
 # TODO!
+movies = Movie.all
+for movie in movies
+    puts "#{movie.name} #{movie.year_released}"
+end
 
 # Prints a header for the cast output
 puts ""
