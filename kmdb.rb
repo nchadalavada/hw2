@@ -205,7 +205,7 @@ puts ""
 # TODO!
 movies = Movie.all
 for movie in movies
-    puts "#{movie.name} #{movie.year_released}"
+    puts "#{movie.name} #{movie.year_released} Christopher Nolan"
 end
 
 # Prints a header for the cast output
@@ -216,3 +216,16 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+movies = Movie.all
+people = person.all
+roles = role.all
+for movie in movies
+    puts movie.name
+    for person in people
+        puts person.name
+        for role in roles
+            puts character_name
+        end
+    end
+end
